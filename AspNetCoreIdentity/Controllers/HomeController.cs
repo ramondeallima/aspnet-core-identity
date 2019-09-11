@@ -18,6 +18,7 @@ namespace AspNetCoreIdentity.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Admin, Gestor")]
         public IActionResult Privacy()
         {
             return View();
