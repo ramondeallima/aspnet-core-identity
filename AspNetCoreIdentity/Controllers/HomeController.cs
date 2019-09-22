@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using AspNetCoreIdentity.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using AspNetCoreIdentity.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -37,6 +38,12 @@ namespace AspNetCoreIdentity.Controllers
 
         [Authorize(Policy = "PodeEscrever")]
         public IActionResult SecretClaimEscrever()
+        {
+            return View();
+        }
+
+        [ClaimsAuthorize("Produtos", "Ler")]
+        public IActionResult ClaimsCustom()
         {
             return View();
         }
