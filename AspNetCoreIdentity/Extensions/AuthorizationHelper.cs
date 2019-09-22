@@ -9,7 +9,6 @@ namespace AspNetCoreIdentity.Extensions
     public class PermissaoNecessaria : IAuthorizationRequirement
     {
         public string Permissao { get; }
-
         public PermissaoNecessaria(string permissao)
         {
             Permissao = permissao;
