@@ -20,6 +20,7 @@ namespace AspNetCoreIdentity
         {
 
             services.AddIdentityConfig(Configuration);
+
             services.AddAuthorizationConfig();
             services.ResolveDependecies();
 
@@ -48,8 +49,6 @@ namespace AspNetCoreIdentity
             {
                 routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
-
-           
         }
     }
 }
